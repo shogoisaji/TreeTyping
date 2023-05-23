@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TreeTypeResult</title>
+        <link rel="stylesheet" type="text/css" href="resultStyles.css" />
+    </head>
+    <body>
+        <h1>Result</h1>
+        <img src="treefree.png" alt="icon" style="width: 40px; height: 40px" />
+
+        <table id="resultTable">
+            <tr>
+                <th>Type</th>
+                <td id="type"></td>
+            </tr>
+            <tr>
+                <th>Count</th>
+                <td id="words"></td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td id="timeTaken"></td>
+            </tr>
+            <tr>
+                <th>Errors</th>
+                <td id="errors"></td>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <td id="rate"></td>
+            </tr>
+            <tr>
+                <th class="tooltip">
+                    Average
+                    <span class="tooltipText">合計文字数 / 時間(秒)</span>
+                </th>
+                <td id="avgTimePerKey"></td>
+            </tr>
+            <tr>
+                <th>Score</th>
+                <td id="score"></td>
+            </tr>
+        </table>
+        <button id="playAgain" class="tooltip"><span class="tooltipAgain">space key</span>Play again</button>
+    </body>
+    <script src="result.js"></script>
+</html>
