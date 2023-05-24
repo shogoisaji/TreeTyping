@@ -295,8 +295,8 @@ let typeSelect = 1;
 let setLevel = 1;
 let levels = {
     1: 10,
-    2: 50,
-    3: 100,
+    2: 30,
+    3: 50,
 };
 let Types = {
     1: "Word",
