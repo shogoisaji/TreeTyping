@@ -6,18 +6,19 @@
         <link rel="icon" href="treefree.ico" />
     </head>
     <body>
-        <h1>Result</h1>
-        <img src="treefree.png" alt="icon" style="width: 40px; height: 40px" />
-
+        <h1 style="transform: translate(5px, 40px)">Result</h1>
+        <img src="treefree.png" alt="icon" style="width: 50px; height: 50px; transform: translate(8px, 48px)" />
+        <div id="levelSelector">
+            <div style="display: inline-block; text-align: center; margin-right: 50px">
+                <label style="color: #959595; text-shadow: none">Type<br /></label>
+                <label id="type">word</label>
+            </div>
+            <div style="display: inline-block; text-align: center; margin-left: 70px">
+                <label style="color: #959595; text-shadow: none">Count<br /></label>
+                <label id="words">11</label>
+            </div>
+        </div>
         <table id="resultTable">
-            <tr>
-                <th>Type</th>
-                <td id="type"></td>
-            </tr>
-            <tr>
-                <th>Count</th>
-                <td id="words"></td>
-            </tr>
             <tr>
                 <th>Time</th>
                 <td id="timeTaken"></td>
