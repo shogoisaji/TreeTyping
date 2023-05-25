@@ -446,7 +446,7 @@ window.addEventListener("keydown", (event) => {
         let timeTaken = ((endTime - startTime) / 1000).toFixed(0);
         let avgTimePerKey = (totalLength / ((endTime - startTime) / 1000)).toFixed(1);
         let rate = (((totalLength - errors) / totalLength) * 100).toFixed(1);
-        let score = ((1 - errors / totalLength) * 3 * avgTimePerKey * maxWords).toFixed(0);
+        let score = ((1 - errors / totalLength) * 5 * (totalLength / ((endTime - startTime) / 1000)) * maxWords).toFixed(0);
         window.location.href = `result.html?score=${score}&timeTaken=${timeTaken}&errors=${errors}&avgTimePerKey=${avgTimePerKey}&words=${maxWords}&type=${typeSelect}&rate=${rate}`;
     }
 });
