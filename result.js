@@ -1,10 +1,24 @@
 var words = 0;
 var type = 0;
+var score = 0;
 
 window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     words = urlParams.get("words");
     type = urlParams.get("type");
+    score = urlParams.get("score");
+
+    let localStorageKey = `${type}_${words}_bestScore`;
+    let bestScore = localStorage.getItem(localStorageKey);
+    console.log(localStorageKey);
+    if (bestScore === null || score > bestScore) {
+        localStorage.setItem(localStorageKey, score);
+        document.getElementById("bestscore").innerText = score;
+        document.getElementById("bestscore").classList.add("flash");
+    } else {
+        document.getElementById("bestscore").innerText = bestScore;
+    }
+
     document.getElementById("rate").innerText = urlParams.get("rate") + "%";
     document.getElementById("type").innerText = urlParams.get("type");
     document.getElementById("words").innerText = urlParams.get("words");
@@ -23,3 +37,14 @@ document.body.onkeyup = function (e) {
         document.getElementById("playAgain").click();
     }
 };
+
+let localStorageKey = `${type}_${words}_bestScore`;
+let bestScore = localStorage.getItem(localStorageKey);
+
+if (bestScore === null || score > bestScore) {
+    localStorage.setItem(localStorageKey, score);
+
+    document.getElementById("bestscore").textContent = score;
+} else {
+    document.getElementById("bestscore").textContent = bestScore;
+}
