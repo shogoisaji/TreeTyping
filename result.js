@@ -10,7 +10,6 @@ window.onload = function () {
 
     let localStorageKey = `${type}_${words}_bestScore`;
     let bestScore = localStorage.getItem(localStorageKey);
-    console.log(localStorageKey);
     if (bestScore === null || score > bestScore) {
         localStorage.setItem(localStorageKey, score);
         document.getElementById("bestscore").innerText = score;
@@ -37,14 +36,3 @@ document.body.onkeyup = function (e) {
         document.getElementById("playAgain").click();
     }
 };
-
-let localStorageKey = `${type}_${words}_bestScore`;
-let bestScore = localStorage.getItem(localStorageKey);
-
-if (bestScore === null || score > bestScore) {
-    localStorage.setItem(localStorageKey, score);
-
-    document.getElementById("bestscore").textContent = score;
-} else {
-    document.getElementById("bestscore").textContent = bestScore;
-}
