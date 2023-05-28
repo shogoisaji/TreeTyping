@@ -6,11 +6,11 @@ window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     words = urlParams.get("words");
     type = urlParams.get("type");
-    score = urlParams.get("score");
+    score = parseInt(urlParams.get("score"));
 
     let localStorageKey = `${type}_${words}_bestScore`;
     let bestScore = localStorage.getItem(localStorageKey);
-    if (bestScore === null || score > bestScore) {
+    if (bestScore === null || score > parseInt(bestScore)) {
         localStorage.setItem(localStorageKey, score);
         document.getElementById("bestscore").innerText = score;
         document.getElementById("bestscore").classList.add("flash");
