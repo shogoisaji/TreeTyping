@@ -219,7 +219,6 @@ let database = {
     standalone: "スタンドアロン",
     transaction: "トランザクション",
     unicode: "ユニコード",
-    vectorize: "ベクトル化",
     wildcard: "ワイルドカード",
     wrapper: "ラッパー",
     anecdote: "逸話",
@@ -292,7 +291,7 @@ let database = {
     terminate: "終了する",
     disable: "無効にする",
     contract: "契約",
-    consumaer: "消費者",
+    consumer: "消費者",
     dedicated: "専用の",
     persistent: "持続的に",
     decimals: "小数点",
@@ -341,19 +340,19 @@ window.onload = function () {
             typeSelect = key;
         }
     }
-    chengeType(typeSelect);
+    changeType(typeSelect);
     startGame(setLevel);
     document.querySelector('label[for="level1"]').textContent = levels[1];
     document.querySelector('label[for="level2"]').textContent = levels[2];
     document.querySelector('label[for="level3"]').textContent = levels[3];
 };
 
-function chengeType(type) {
+function changeType(type) {
     typeSelect = Types[type];
     startGame();
 }
 
-function chengeLevel(level) {
+function changeLevel(level) {
     setLevel = level;
     startGame();
 }
