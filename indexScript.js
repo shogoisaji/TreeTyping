@@ -476,3 +476,7 @@ window.addEventListener("keydown", (event) => {
         window.location.href = `result.html?score=${score}&timeTaken=${timeTaken}&errors=${errors}&avgTimePerKey=${avgTimePerKey}&words=${maxWords}&type=${typeSelect}&rate=${rate}`;
     }
 });
+
+document.getElementById("playReset").addEventListener("click", function () {
+    window.location.href = "index.html";
+});
