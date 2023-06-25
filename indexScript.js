@@ -478,5 +478,5 @@ window.addEventListener("keydown", (event) => {
 });
 
 document.getElementById("playReset").addEventListener("click", function () {
-    window.location.href = "index.html";
+    window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
 });
