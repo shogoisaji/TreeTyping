@@ -328,6 +328,7 @@ let Types = {
     2: "Random",
 };
 
+
 window.onload = function () {
     let urlParams = new URLSearchParams(window.location.search);
     for (let key in levels) {
@@ -462,15 +463,15 @@ window.addEventListener("keydown", (event) => {
 
             setTimeout(() => {
                 incorrectElement.classList.remove("incorrect");
-            }, 1000);
+            }, 200);
         }
     }
 
-    if (totalWords === maxWords) {
-        let endTime = Date.now();
-        let timeTaken = ((endTime - startTime) / 1000).toFixed(0);
-        let avgTimePerKey = (totalLength / ((endTime - startTime) / 1000)).toFixed(1);
-        let rate = (((totalLength - errors) / totalLength) * 100).toFixed(1);
+if (totalWords === maxWords) {
+    let endTime = Date.now();
+    let timeTaken = ((endTime - startTime) / 1000).toFixed(0);
+    let avgTimePerKey = (totalLength / ((endTime - startTime) / 1000)).toFixed(1);
+    let rate = (((totalLength - errors) / totalLength) * 100).toFixed(1);
         let score = ((1 - errors / totalLength) * 10 * (totalLength / ((endTime - startTime) / 1000)) * maxWords).toFixed(0);
         window.location.href = `result.html?score=${score}&timeTaken=${timeTaken}&errors=${errors}&avgTimePerKey=${avgTimePerKey}&words=${maxWords}&type=${typeSelect}&rate=${rate}`;
     }

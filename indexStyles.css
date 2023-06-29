@@ -31,33 +31,14 @@ input[type="radio"]:checked + label {
     text-shadow: 0px 0px 7px rgb(2, 121, 0);
 }
 
-@keyframes flash {
-    0% {
-        color: black;
-    }
-    10% {
-        text-shadow: 0px 0px 10px rgb(255, 0, 0);
-        color: rgb(225, 25, 25);
-    }
-    100% {
-        /* color: black; */
-        color: rgb(225, 25, 25);
-        text-shadow: 0px 0px 15px rgb(255, 0, 0);
-    }
-}
-
-.incorrect {
-    animation-name: flash;
-    animation-duration: 0.2s;
-}
 
 .typeOption {
-    margin-right: 5px;
+    padding: 1px 1px;
 }
 
 .labelType {
+    margin-left: 10px;
     color: rgb(200, 200, 200);
-    /* font-weight: bold; */
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
 }
 
@@ -65,22 +46,9 @@ input[type="radio"]:checked + label {
     display: none;
 }
 
-#gameContainer {
-    width: 80%;
-    max-width: 450px;
-    background-color: #e3f4ff;
-    border-radius: 10px;
-    background: #959595;
-    /* border-bottom: solid 7px #5b5b5b; */
-    padding: 1rem 1rem;
-    overflow-wrap: break-word;
-    position: relative;
-    font-size: 25px;
-}
 
 #displayContainer {
     color: #000;
-    /* height: 2em; */
     overflow: auto;
     font-size: 50px;
     letter-spacing: 2px;
@@ -124,13 +92,61 @@ input[type="radio"]:checked + label {
 }
 
 button {
-    /* display: inline-block; */
     padding: 8px 15px;
     background-color: rgb(255, 155, 40);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    /* margin: 27px 0; */
     font-size: 20px;
     font-weight: bold;
+}
+
+#gameContainer {
+    width: 80%;
+    max-width: 450px;
+    background-color: #e3f4ff;
+    border-radius: 10px;
+    background: #959595;
+    padding: 1rem 1rem;
+    overflow-wrap: break-word;
+    position: relative;
+    font-size: 25px;
+}
+
+#treeSVG {
+    padding: 10rem 1rem;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -42%);
+    z-index: -1;
+}
+
+#errorSvgContainer {
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -42%);
+    position: absolute;
+    z-index: -1;
+}
+
+.incorrect {
+    animation-name: flash;
+    animation-duration: 0.2s;
+}
+
+@keyframes flash {
+    0% {
+        color: black;
+    }
+    10% {
+        text-shadow: 0px 0px 10px rgb(255, 0, 0);
+        color: rgb(225, 25, 25);
+    }
+    100% {
+        /* color: black; */
+        color: rgb(225, 25, 25);
+        text-shadow: 0px 0px 15px rgb(255, 0, 0);
+    }
 }
