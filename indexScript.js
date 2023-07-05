@@ -494,5 +494,6 @@ document.getElementById("playReset").addEventListener("click", function () {
 document.querySelector('#hideBlock').addEventListener('click', function() {
     this.classList.add('moveUp');
     scoreLogo.classList.add('moveIn');
+    showBestScore.classList.add('moveIn');
 });
 
