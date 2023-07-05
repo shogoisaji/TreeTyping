@@ -395,6 +395,14 @@ function newWord() {
 
     var progress = (totalWords / maxWords) * 100;
     document.getElementById("progressBar").style.width = progress + "%";
+
+    words = maxWords;
+    type = "Word";
+    let localStorageKey = `${type}_${words}_bestScore`;
+    let bestScore = localStorage.getItem(localStorageKey);
+    document.getElementById("showBestScore").innerText = bestScore;
+    if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
+    console.log(bestScore, words, type)
 }
 
 function newWordRandom() {
@@ -419,6 +427,14 @@ function newWordRandom() {
     totalLength += currentWord.length;
     var progress = (totalWords / maxWords) * 100;
     document.getElementById("progressBar").style.width = progress + "%";
+
+    words = maxWords;
+    type = "Random";
+    let localStorageKey = `${type}_${words}_bestScore`;
+    let bestScore = localStorage.getItem(localStorageKey);
+    document.getElementById("showBestScore").innerText = bestScore;
+    if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
+    console.log(bestScore, words, type)
 }
 
 window.addEventListener("keydown", function (e) {
@@ -474,3 +490,9 @@ if (totalWords === maxWords) {
 document.getElementById("playReset").addEventListener("click", function () {
     window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
 });
+
+document.querySelector('#hideBlock').addEventListener('click', function() {
+    this.classList.add('moveUp');
+    scoreLogo.classList.add('moveIn');
+});
+

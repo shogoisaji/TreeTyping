@@ -5,6 +5,7 @@ body {
     height: 100vh;
     flex-direction: column;
     background-color: #343434;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #levelSelector {
@@ -19,6 +20,7 @@ input[type="radio"] {
 
 input[type="radio"] + label {
     color: #959595;
+    cursor: pointer;
 }
 
 input[type="radio"]:checked + label {
@@ -96,9 +98,13 @@ button {
     background-color: rgb(255, 155, 40);
     color: rgb(0, 0, 0);
     border-radius: 10px;
-    transition: background-color 0.3s ease;
     font-size: 20px;
-    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    color: rgb(230, 230, 230);
+    background-color: rgb(190, 102, 0);
 }
 
 #gameContainer {
@@ -113,6 +119,83 @@ button {
     font-size: 25px;
 }
 
+#showBestScore{
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    font-size: 15px;
+    text-align: center;
+}
+
+#hideBlock{
+    width: 75px;
+    height: 26px;
+    background-color: #959595;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0%;
+    right: 2%;
+    z-index: +1;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#hideBlock:hover {
+    color: rgb(255, 155, 40);
+}
+
+#underBlock{
+    width: 65px;
+    height: 7px;
+    background-color: #6161613f;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 30%;
+    right: 7%;
+    z-index: -1;
+}
+
+#hideBlock.moveUp {
+    animation: moveUp 01.0s forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        bottom: 13%;
+        opacity: 1;
+    }
+    100% {
+        bottom: 15%;
+        opacity: 0;
+    }
+}
+
+#scoreLogo{
+    position: absolute;
+    bottom: 12%;
+    right: 3%;
+    font-size: 13px;
+    text-align: center;
+    opacity: 0;
+}
+
+#scoreLogo.moveIn {
+    animation: moveIn 01.0s forwards;
+}
+
+@keyframes moveIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 #treeSVG {
     padding: 10rem 1rem;
     overflow-wrap: break-word;
@@ -120,14 +203,6 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-90%, -42%);
-    z-index: -1;
-}
-
-#errorSvgContainer {
-    top: 50%;
-    left: 50%;
-    transform: translate(-90%, -42%);
-    position: absolute;
     z-index: -1;
 }
 
