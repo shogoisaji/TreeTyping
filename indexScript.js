@@ -396,13 +396,15 @@ function newWord() {
     var progress = (totalWords / maxWords) * 100;
     document.getElementById("progressBar").style.width = progress + "%";
 
-    words = maxWords;
-    type = "Word";
-    let localStorageKey = `${type}_${words}_bestScore`;
-    let bestScore = localStorage.getItem(localStorageKey);
-    document.getElementById("showBestScore").innerText = bestScore;
-    if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
-    console.log(bestScore, words, type)
+    if(totalWords == 0){
+        words = maxWords;
+        type = "Word";
+        let localStorageKey = `${type}_${words}_bestScore`;
+        let bestScore = localStorage.getItem(localStorageKey);
+        document.getElementById("showBestScore").innerText = bestScore;
+        if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
+        console.log(bestScore, words, type)
+    }
 }
 
 function newWordRandom() {
@@ -428,13 +430,15 @@ function newWordRandom() {
     var progress = (totalWords / maxWords) * 100;
     document.getElementById("progressBar").style.width = progress + "%";
 
-    words = maxWords;
-    type = "Random";
-    let localStorageKey = `${type}_${words}_bestScore`;
-    let bestScore = localStorage.getItem(localStorageKey);
-    document.getElementById("showBestScore").innerText = bestScore;
-    if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
-    console.log(bestScore, words, type)
+    if(totalWords == 0){
+        words = maxWords;
+        type = "Random";
+        let localStorageKey = `${type}_${words}_bestScore`;
+        let bestScore = localStorage.getItem(localStorageKey);
+        document.getElementById("showBestScore").innerText = bestScore;
+        if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
+        console.log(bestScore, words, type)
+    }
 }
 
 window.addEventListener("keydown", function (e) {
