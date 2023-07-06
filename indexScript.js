@@ -467,6 +467,10 @@ window.addEventListener("keydown", (event) => {
                 } else if (typeSelect == "Random") {
                     newWordRandom();
                 }
+
+                if(totalWords==1){
+                    AllHideBlock.classList.add('hideAll');
+                }
             }
         }
     } else {
