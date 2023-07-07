@@ -344,12 +344,12 @@ window.onload = function () {
 
 function changeType(type) {
     typeSelect = Types[type];
-    reload();
+    startGame();
 }
 
 function changeLevel(level) {
     setLevel = level;
-    reload();
+    startGame();
 }
 
 function startGame() {
@@ -440,6 +440,10 @@ function showBest(_type) {
 
 function reload(){
     window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
+}
+
+function resetIndex(){
+    totalWords = 0;
 }
 
 window.addEventListener("keydown", function (e) {
