@@ -442,9 +442,9 @@ function reload(){
     window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
 }
 
-function resetIndex(){
-    totalWords = 0;
-}
+// function resetIndex(){
+//     totalWords = 0;
+// }
 
 window.addEventListener("keydown", function (e) {
     if (e.key === " ") {
