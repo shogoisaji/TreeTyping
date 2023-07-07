@@ -344,12 +344,12 @@ window.onload = function () {
 
 function changeType(type) {
     typeSelect = Types[type];
-    startGame();
+    reload();
 }
 
 function changeLevel(level) {
     setLevel = level;
-    startGame();
+    reload();
 }
 
 function startGame() {
@@ -438,6 +438,10 @@ function showBest(_type) {
     if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
 }
 
+function reload(){
+    window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
+}
+
 window.addEventListener("keydown", function (e) {
     if (e.key === " ") {
         e.preventDefault();
@@ -493,7 +497,7 @@ if (totalWords === maxWords) {
 });
 
 document.getElementById("playReset").addEventListener("click", function () {
-    window.location.href = "index.html?words=" + levels[setLevel] + "&type=" + typeSelect;
+    reload();
 });
 
 document.querySelector('#hideBlock').addEventListener('click', function() {
