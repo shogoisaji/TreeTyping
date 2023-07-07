@@ -110,14 +110,15 @@ button:hover {
 #gameContainer {
     width: 80%;
     max-width: 450px;
-    background-color: #e3f4ff;
+    height: 500px;
+    background-color: #959595;
     border-radius: 10px;
-    background: #959595;
     padding: 1rem 1rem;
     overflow-wrap: break-word;
     position: relative;
     font-size: 25px;
 }
+
 
 #showBestScore{
     position: absolute;
