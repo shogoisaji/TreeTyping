@@ -24,26 +24,26 @@
             <div style="display: inline-block; margin-left: 10px">
                 <label class="labelType">Type :</label>
                 <div class="typeOption" style="display: inline-block">
-                    <input type="radio" id="Word" name="typeSelect" value="1" onclick="changeType(1);" checked />
+                    <input type="radio" id="Word" name="typeSelect" value="1" onclick="changeType(1); resetIndex();" checked />
                     <label for="Word">Word</label>
                 </div>
                 <div class="typeOption" style="display: inline-block">
-                    <input type="radio" id="Random" name="typeSelect" value="2" onclick="changeType(2);" />
+                    <input type="radio" id="Random" name="typeSelect" value="2" onclick="changeType(2); resetIndex();" />
                     <label for="Random">Random</label>
                 </div>
             </div>
             <div style="display: inline-block; margin-left: 10px">
                 <label class="labelType">Count :</label>
                 <div class="typeOption" style="display: inline-block">
-                    <input type="radio" id="level1" name="level" value="1" onclick="changeLevel(1);" checked />
+                    <input type="radio" id="level1" name="level" value="1" onclick="changeLevel(1); resetIndex();" checked />
                     <label for="level1">1</label>
                 </div>
                 <div class="typeOption" style="display: inline-block">
-                    <input type="radio" id="level2" name="level" value="2" onclick="changeLevel(2);" />
+                    <input type="radio" id="level2" name="level" value="2" onclick="changeLevel(2); resetIndex();" />
                     <label for="level2">2</label>
                 </div>
                 <div class="typeOption" style="display: inline-block">
-                    <input type="radio" id="level3" name="level" value="3" onclick="changeLevel(3);" />
+                    <input type="radio" id="level3" name="level" value="3" onclick="changeLevel(3); resetIndex();" />
                     <label for="level3">3</label>
                 </div>
             </div>
