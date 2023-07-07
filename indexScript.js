@@ -438,6 +438,10 @@ function showBest(_type) {
     if(bestScore == null){ document.getElementById("showBestScore").innerText = "---";}
 }
 
+function resetIndex(){
+    totalWords = 0;
+}
+
 window.addEventListener("keydown", function (e) {
     if (e.key === " ") {
         e.preventDefault();
